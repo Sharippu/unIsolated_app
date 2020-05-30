@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         initialRoute: 'main_menu', routes: {
         'main_menu': (context) => MainMenu(),
-      }
+    }
     );
   }
 }
