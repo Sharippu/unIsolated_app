@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class ActivityCard extends StatelessWidget {
 
   final Color color;
+  final String name;
+  final String time;
 
-  ActivityCard({this.color});
+  ActivityCard({this.color, this.name, this.time});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class ActivityCard extends StatelessWidget {
               child: Container(
                 alignment: Alignment(-0.9, 0),
                 child: Text(
-                  "TYPE",
+                  "",
                   textAlign: TextAlign.left,
                   style: TextStyle(fontSize: 16),
                 ),
@@ -49,14 +51,14 @@ class ActivityCard extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Text(
-                      "TIME",
+                      time ?? "No time",
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 16, height: 2),
                     ),
                     Text(
-                      "ACTIVITY NAME",
+                      name ?? "No name",
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 25),
+                      style: TextStyle(fontSize: 20),
                     )
                   ],
                 ),

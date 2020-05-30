@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'main_menu.dart';
 
-import 'card.dart';
-
 void main() {
   runApp(MyApp());
 }
