@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1019251465795",
+    "firebase_url": "https://unisolated-app.firebaseio.com",
+    "project_id": "unisolated-app",
+    "storage_bucket": "unisolated-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019251465795:android:cad63fc5511008ffbd3ef6",
+        "android_client_info": {
+          "package_name": "com.isolated.unisolatedapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019251465795-v6jalr6ukiudps15epl31fnl84gulo3m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.isolated.unisolatedapp",
+            "certificate_hash": "19a70d05338ffa4678195ea0b9b4aa2efce98769"
+          }
+        },
+        {
+          "client_id": "1019251465795-iobi3of8rupblaa2os44lnnj8f9tn70o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyvO_xXz_wrifiG2mmMIjWssYqb11ixOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019251465795-iobi3of8rupblaa2os44lnnj8f9tn70o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

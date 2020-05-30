@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:unisolatedapp/auth.dart';
+
+import 'login_menu.dart';
 
 class SideBar extends StatelessWidget {
   @override
@@ -34,6 +37,17 @@ class SideBar extends StatelessWidget {
                         ),
                         ),
                         onTap: () => {},
+                      ),
+                      ListTile(
+                        title: Text('Log out',
+                          style: TextStyle(
+                              fontSize: 20
+                          ),
+                        ),
+                        onTap: () {
+                          signOutGoogle();
+                          Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context){return LoginMenu();}), ModalRoute.withName('/'));
+                        },
                       ),
                     ],
                   )

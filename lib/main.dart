@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unisolatedapp/login_menu.dart';
 import 'main_menu.dart';
 
 import 'card.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         initialRoute: 'main_menu', routes: {
-        'main_menu': (context) => MainMenu(),
+        'main_menu': (context) => LoginMenu(),
     }
     );
   }
