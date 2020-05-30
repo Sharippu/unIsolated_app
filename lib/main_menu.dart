@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'sidebar.dart';
 import 'app_bar.dart';
+import 'card.dart';
 
 class MainMenu extends StatelessWidget {
   @override
@@ -8,7 +9,16 @@ class MainMenu extends StatelessWidget {
     return Scaffold(
       appBar: topBar(),
       drawer: SideBar(),
-      body: Container(),
+      body: Container(
+        child: Padding(
+          padding: EdgeInsets.only(top: 30, left: 40, right: 40),
+          child: ListView(
+            children: <Widget>[
+              ActivityCard()
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
