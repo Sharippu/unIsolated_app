@@ -14,7 +14,9 @@ class MainMenu extends StatelessWidget {
           padding: EdgeInsets.only(top: 30, left: 40, right: 40),
           child: ListView(
             children: <Widget>[
-              ActivityCard()
+              ActivityCard(color: Colors.red),
+              ActivityCard(color: Colors.green),
+              ActivityCard(color: Colors.blue),
             ],
           ),
         ),

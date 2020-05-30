@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 
 class ActivityCard extends StatelessWidget {
 
+  final Color color;
+
+  ActivityCard({this.color});
+
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: EdgeInsets.symmetric(vertical: 20),
       elevation: 6.0,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20.0))
@@ -14,7 +19,7 @@ class ActivityCard extends StatelessWidget {
         height: 120,
         padding: EdgeInsets.only(top: 12.0),
         decoration: BoxDecoration(
-          color: Colors.red,
+          color: color,
           borderRadius: BorderRadius.circular(20.0)
         ),
         child: Column(
