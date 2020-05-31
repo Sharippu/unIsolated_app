@@ -6,9 +6,7 @@ import 'package:unisolatedapp/auth.dart';
 class SideBar extends StatelessWidget {
   FirebaseUser user;
 
-  SideBar(FirebaseUser user) {
-    this.user = user;
-  }
+  SideBar(this.user);
 
   @override
   Widget build(BuildContext context) {
