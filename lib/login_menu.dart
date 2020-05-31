@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:unisolatedapp/main_menu.dart';
 
@@ -14,6 +15,17 @@ class LoginMenu extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 70, bottom: 70
+                ),
+                child: Text(
+                  'UNISOLATED',
+                  style: TextStyle(
+                      fontSize: 40
+                  ),
+                ),
+              ),
               signInButton(context)
             ],
           ),
@@ -22,19 +34,9 @@ class LoginMenu extends StatelessWidget {
     );
   }
 
-  Widget signInButton(BuildContext context){
+  Widget signInButton(BuildContext context) {
     return OutlineButton(
-      onPressed: (){
-        signInGoogle().whenComplete(() {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) {
-                return MainMenu();
-              },
-            ),
-          );
-        });
-      },
+      onPressed: () => signIn(context),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       borderSide: BorderSide(color: Colors.blue),
       highlightElevation: 0,
@@ -46,5 +48,12 @@ class LoginMenu extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void signIn(BuildContext context) async {
+    FirebaseUser user = await signInGoogle();
+    Navigator.pushReplacement(context, MaterialPageRoute(
+        builder: (context) => MainMenu(user)
+    ));
   }
 }
